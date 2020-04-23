@@ -65,53 +65,53 @@ public class Aiflix {
         serie1.temporada.add(serie1T1);
         serie1.temporada.add(serie1T2);
 
-        Episodio serie1T1E1 = new Episodio();
-        serie1T1E1.nombre = "Pilot";
-        serie1T1E1.numero = 1;
-        serie1T1E1.duracionEnMinutos = 45;
+        Episodio ep = new Episodio(1,"Pilot",45);
+        //serie1T1E1.nombre = "Pilot";
+        //serie1T1E1.numero = 1;
+        //serie1T1E1.duracionEnMinutos = 45;
 
-        serie1T1.episodios.add(serie1T1E1);
+        serie1T1.episodios.add(ep);
 
-        Episodio serie1T1E2 = new Episodio();
-        serie1T1E2.nombre = "Wendigo";
-        serie1T1E2.numero = 2;
-        serie1T1E2.duracionEnMinutos = 41;
+        ep = new Episodio(2,"Wendigo",41);
+        //serie1T1E2.nombre = "Wendigo";
+        //serie1T1E2.numero = 2;
+        //serie1T1E2.duracionEnMinutos = 41;
 
-        serie1T1.episodios.add(serie1T1E2);
+        serie1T1.episodios.add(ep);
 
-        Episodio serie1T1E3 = new Episodio();
-        serie1T1E3.nombre = "Dead in the Water";
-        serie1T1E3.numero = 3;
-        serie1T1E3.duracionEnMinutos = 43;
+        ep = new Episodio(3,"Dead in the Water",43);
+        //serie1T1E3.nombre = "Dead in the Water";
+        //serie1T1E3.numero = 3;
+        //serie1T1E3.duracionEnMinutos = 43;
 
-        serie1T1.episodios.add(serie1T1E3);
+        serie1T1.episodios.add(ep);
 
-        Episodio serie1T2E1 = new Episodio();
-        serie1T2E1.nombre = "In My Time of Dying";
-        serie1T2E1.numero = 1;
-        serie1T2E1.duracionEnMinutos = 46;
+        ep = new Episodio(1,"In My Time of Dying",46);
+        //serie1T2E1.nombre = "In My Time of Dying";
+        //serie1T2E1.numero = 1;
+        //serie1T2E1.duracionEnMinutos = 46;
 
-        serie1T2.episodios.add(serie1T2E1);
+        serie1T2.episodios.add(ep);
 
-        Episodio serie1T2E2 = new Episodio();
-        serie1T2E2.nombre = "Everybody Loves a Clown";
-        serie1T2E2.numero = 2;
-        serie1T2E2.duracionEnMinutos = 42;
+        ep = new Episodio(2,"Everybody Loves a Clown",42);
+        //serie1T2E2.nombre = "Everybody Loves a Clown";
+        //serie1T2E2.numero = 2;
+        //serie1T2E2.duracionEnMinutos = 42;
 
-        serie1T2.episodios.add(serie1T2E2);
+        serie1T2.episodios.add(ep);
 
-        Episodio serie1T2E3 = new Episodio();
-        serie1T2E3.nombre = "Bloodlust";
-        serie1T2E3.numero = 3;
-        serie1T2E3.duracionEnMinutos = 44;
+        ep = new Episodio(3,"Bloodlust",44);
+        //serie1T2E3.nombre = "Bloodlust";
+        //serie1T2E3.numero = 3;
+        //serie1T2E3.duracionEnMinutos = 44;
 
-        serie1T2.episodios.add(serie1T2E3);
+        serie1T2.episodios.add(ep);
 
-        Websodio webi = new Websodio();
-        webi.nombre = "GYork+Angel_102311.m4v";
-        webi.numero = 44;
-        webi.duracionEnMinutos = 11;
-        webi.url = "https://www.youtube.com/watch?v=SBod5vxOCyE";
+        Websodio webi = new Websodio(44,"GYork+Angel_102311.m4v",11,"https://www.youtube.com/watch?v=SBod5vxOCyE");
+        //webi.nombre = "GYork+Angel_102311.m4v";
+        //webi.numero = 44;
+        //webi.duracionEnMinutos = 11;
+        //webi.url = "https://www.youtube.com/watch?v=SBod5vxOCyE";
 
         serie1T2.episodios.add(webi);
 
@@ -160,47 +160,47 @@ public class Aiflix {
         serie2.temporada.add(serie2T1);
         serie2.temporada.add(serie2T2);
 
-        Episodio serie2T1E1 = new Episodio();
-        serie2T1E1.nombre = "Izuku Midoriya: Origin";
-        serie2T1E1.numero = 1;
-        serie2T1E1.duracionEnMinutos = 25;
+        Episodio epi = new Episodio(1,"Izuku Midoriya: Origin",25);
+        //serie2T1E1.nombre = "Izuku Midoriya: Origin";
+        //serie2T1E1.numero = 1;
+        //serie2T1E1.duracionEnMinutos = 25;
 
-        serie2T1.episodios.add(serie2T1E1);
+        serie2T1.episodios.add(epi);
 
-        Episodio serie2T1E2 = new Episodio();
-        serie2T1E2.nombre = "What It Takes to Be a Hero";
-        serie2T1E2.numero = 2;
-        serie2T1E2.duracionEnMinutos = 24;
+        epi = new Episodio(2,"What It Takes to Be a Hero",24);
+        //serie2T1E2.nombre = "What It Takes to Be a Hero";
+        //serie2T1E2.numero = 2;
+        //serie2T1E2.duracionEnMinutos = 24;
 
-        serie2T1.episodios.add(serie2T1E2);
+        serie2T1.episodios.add(epi);
 
-        Episodio serie2T1E3 = new Episodio();
-        serie2T1E3.nombre = "Roaring Muscles";
-        serie2T1E3.numero = 3;
-        serie2T1E3.duracionEnMinutos = 25;
+        epi = new Episodio(3,"Roaring Muscles",25);
+        //serie2T1E3.nombre = "Roaring Muscles";
+        //serie2T1E3.numero = 3;
+        //serie2T1E3.duracionEnMinutos = 25;
 
-        serie2T1.episodios.add(serie2T1E3);
+        serie2T1.episodios.add(epi);
 
-        Episodio serie2T2E1 = new Episodio();
-        serie2T2E1.nombre = "Hero Notebook";
-        serie2T2E1.numero = 1;
-        serie2T2E1.duracionEnMinutos = 24;
+        epi = new Episodio(1,"Hero Notebook",24);
+        //serie2T2E1.nombre = "Hero Notebook";
+        //serie2T2E1.numero = 1;
+        //serie2T2E1.duracionEnMinutos = 24;
 
-        serie2T1.episodios.add(serie2T2E1);
+        serie2T1.episodios.add(epi);
 
-        Episodio serie2T2E2 = new Episodio();
-        serie2T2E2.nombre = "That's the Idea, Ochaco";
-        serie2T2E2.numero = 2;
-        serie2T2E2.duracionEnMinutos = 25;
+        epi = new Episodio(2,"That's the Idea, Ochaco",25);
+        //serie2T2E2.nombre = "That's the Idea, Ochaco";
+        //serie2T2E2.numero = 2;
+        //serie2T2E2.duracionEnMinutos = 25;
 
-        serie2T2.episodios.add(serie2T2E2);
+        serie2T2.episodios.add(epi);
 
-        Episodio serie2T2E3 = new Episodio();
-        serie2T2E3.nombre = "Roaring Sports Festival";
-        serie2T2E3.numero = 3;
-        serie2T2E3.duracionEnMinutos = 23;
+        epi = new Episodio(3,"Roaring Sports Festival",23);
+        //serie2T2E3.nombre = "Roaring Sports Festival";
+        //serie2T2E3.numero = 3;
+        //serie2T2E3.duracionEnMinutos = 23;
 
-        serie2T2.episodios.add(serie2T2E3);
+        serie2T2.episodios.add(epi);
 
         this.series.add(serie2);
 
@@ -247,47 +247,47 @@ public class Aiflix {
         serie3.temporada.add(serie3T1);
         serie3.temporada.add(serie3T2);
 
-        Episodio serie3T1E1 = new Episodio();
-        serie3T1E1.nombre = "Secrets";
-        serie3T1E1.numero = 1;
-        serie3T1E1.duracionEnMinutos = 51;
+        Episodio epi = new Episodio(1,"Secrets",51);
+        //serie3T1E1.nombre = "Secrets";
+        //serie3T1E1.numero = 1;
+        //serie3T1E1.duracionEnMinutos = 51;
 
-        serie3T1.episodios.add(serie3T1E1);
+        serie3T1.episodios.add(epi);
 
-        Episodio serie3T1E2 = new Episodio();
-        serie3T1E2.nombre = "Lies";
-        serie3T1E2.numero = 2;
-        serie3T1E2.duracionEnMinutos = 44;
+        epi = new Episodio(2,"Lies",44);
+        //serie3T1E2.nombre = "Lies";
+        //serie3T1E2.numero = 2;
+        //serie3T1E2.duracionEnMinutos = 44;
 
-        serie3T1.episodios.add(serie3T1E2);
+        serie3T1.episodios.add(epi);
 
-        Episodio serie3T1E3 = new Episodio();
-        serie3T1E3.nombre = "Past and Present";
-        serie3T1E3.numero = 3;
-        serie3T1E3.duracionEnMinutos = 45;
+        epi = new Episodio(3,"Past and Present",45);
+        //serie3T1E3.nombre = "Past and Present";
+        //serie3T1E3.numero = 3;
+        //serie3T1E3.duracionEnMinutos = 45;
 
-        serie3T1.episodios.add(serie3T1E3);
+        serie3T1.episodios.add(epi);
 
-        Episodio serie3T2E1 = new Episodio();
-        serie3T2E1.nombre = "Beginnings and Endings";
-        serie3T2E1.numero = 1;
-        serie3T2E1.duracionEnMinutos = 53;
+        epi = new Episodio(1,"Beginnings and Endings",53);
+        //serie3T2E1.nombre = "Beginnings and Endings";
+        //serie3T2E1.numero = 1;
+        //serie3T2E1.duracionEnMinutos = 53;
 
-        serie3T1.episodios.add(serie3T2E1);
+        serie3T1.episodios.add(epi);
 
-        Episodio serie3T2E2 = new Episodio();
-        serie3T2E2.nombre = "Dark Matter";
-        serie3T2E2.numero = 2;
-        serie3T2E2.duracionEnMinutos = 54;
+        epi = new Episodio(2,"Dark Matter",54);
+        //serie3T2E2.nombre = "Dark Matter";
+        //serie3T2E2.numero = 2;
+        //serie3T2E2.duracionEnMinutos = 54;
 
-        serie3T2.episodios.add(serie3T2E2);
+        serie3T2.episodios.add(epi);
 
-        Episodio serie3T2E3 = new Episodio();
-        serie3T2E3.nombre = "Ghosts";
-        serie3T2E3.numero = 3;
-        serie3T2E3.duracionEnMinutos = 56;
+        epi = new Episodio(3,"Ghosts",56);
+        //serie3T2E3.nombre = "Ghosts";
+        //serie3T2E3.numero = 3;
+        //serie3T2E3.duracionEnMinutos = 56;
 
-        serie3T2.episodios.add(serie3T2E3);
+        serie3T2.episodios.add(epi);
 
         this.series.add(serie3);
 
