@@ -2,20 +2,53 @@ package app;
 
 public class Episodio {
 
-    public Episodio(int numero, String nombre, int duracionEnMinutos){
+    public Episodio(int numero, String nombre, int duracionEnMinutos) {
         this.numero = numero;
         this.nombre = nombre;
         this.duracionEnMinutos = duracionEnMinutos;
 
     }
 
-    public int numero;
-    public String nombre;
-    public int duracionEnMinutos;
-    public String descripcion;
+    private int numero;
+    private String nombre;
+    private int duracionEnMinutos;
+    private String descripcion;
 
+    public int getNumero() {
+        return this.numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public String getNombre(){
+        return this.nombre;
+    }
+
+    public void setNombre(String nombre){
+        this.nombre = nombre;
+    }
+
+    public int getDuracionEnMinutos(){
+        return this.duracionEnMinutos;
+    }
+
+    public void setDuracionEnMinutos(int duracionEnMinutos){
+        this.duracionEnMinutos = duracionEnMinutos;
+    }
+
+    public String getDescripcion(){
+        return this.descripcion;
+    }
+
+    public void setDescripcion(String descripcion){
+        this.descripcion = descripcion;
+    }
+
+    
     public void reproducir(){
-        System.out.println("Se esta reproduciendo el episodio numero " + this.numero + " " + this.nombre);
+        System.out.println("Se esta reproduciendo el episodio numero " + this.getNumero() + " " + this.getNombre());
         
     }
 

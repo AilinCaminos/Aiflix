@@ -9,11 +9,19 @@ public class Websodio extends Episodio {
         this.url = url;
     }
 
-    public String url;
+    private String url;
+
+    public String getUrl(){
+        return this.url;
+    }
+    public void setUrl(String url){
+        this.url = url;
+    }
 
     @Override /// Anotacion que indica que el metodo se sobre escribe(redefinicion)
     public void reproducir(){
-        System.out.println("Se esta reproduciendo el websodio numero " + this.numero + " " + this.nombre + " url: " + this.url);
+        super.reproducir();
+        System.out.println("Se esta reproduciendo el websodio numero " + this.getNumero() + " " + this.getNombre() + " url: " + this.getUrl());
         
     }
         /**
@@ -22,7 +30,7 @@ public class Websodio extends Episodio {
      */
     public void enviarAlertaDeQueEstaOnline() {
         // mandaria un mail a los usuarios avisando que ya esta disponible para ver.
-        System.out.println("Enviando mail con url " + this.url);
+        System.out.println("Enviando mail con url " + this.getUrl());
     }
 
 

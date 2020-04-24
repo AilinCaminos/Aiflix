@@ -15,7 +15,7 @@ public class App {
 
         Serie spn = miAiflix.buscarSerie("Supernatural");
 
-        Temporada laMejorTemporada = spn.getTemporada(1);
+        Temporada laMejorTemporada = spn.getTemporada(2);
 
         Episodio elTop;
 
