@@ -1,28 +1,62 @@
 package app;
 
-public class Pelicula extends Contenido {
+import java.util.ArrayList;
+import java.util.List;
 
-    public Pelicula(Director director,int duracionEnMinutos){
+import app.personas.*;
 
-        this.director = director;
+
+public class Pelicula extends Contenido implements INominable {
+
+   public Pelicula(String nombre, int duracionEnMinutos, int anio) {
+
+        this.setNombre(nombre);
         this.duracionEnMinutos = duracionEnMinutos;
+        this.setAnio(anio);
     }
 
-    private Director director;
+    private List<Director> director = new ArrayList<>();
     private int duracionEnMinutos;
 
-    public Director getDirector(){
+    public List<Director> getDirector() {
         return this.director;
     }
-    public void setDirector(Director director){
+
+    public void setDirector(List<Director> director) {
         this.director = director;
     }
 
-    public int getDuracionEnMinutos(){
+    public int getDuracionEnMinutos() {
         return this.duracionEnMinutos;
     }
-    public void setDuracionEnMinutos(int duracionEnMinutos){
+
+    public void setDuracionEnMinutos(int duracionEnMinutos) {
         this.duracionEnMinutos = duracionEnMinutos;
+    }
+
+    @Override
+    public boolean ganoPreviamente() {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    @Override
+    public void reproducirTrailerNominacion() {
+        // TODO Auto-generated method stub
+        System.out.println("Reproduciendo trailer de " + this.getNombre());
+
+    }
+
+    @Override
+    public void sacarSelfie(List<Actor> elenco) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public boolean estaNominada() {
+        // TODO Auto-generated method stub
+        return false;
     }
 
 

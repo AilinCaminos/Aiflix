@@ -45,6 +45,7 @@ public class App {
         epiDemo.reproducir();
 
         if (epiDemo instanceof Websodio) {
+            
             Websodio webi = (Websodio)epiDemo;
             webi.enviarAlertaDeQueEstaOnline();
 
@@ -53,6 +54,11 @@ public class App {
         else {
             System.out.println("No hay que hacer nada con un Episodio");
         }
+
+        miAiflix.inicializarListaNominados();
+
+        miAiflix.reproducirTrailersDeNominacion();
+
 
 
 

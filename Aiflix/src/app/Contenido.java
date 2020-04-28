@@ -3,7 +3,9 @@ package app;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Contenido {
+import app.personas.Actor;
+
+public abstract class Contenido {
 
     private String nombre;
     private double calificacion;

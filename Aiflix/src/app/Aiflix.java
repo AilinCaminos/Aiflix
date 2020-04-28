@@ -3,10 +3,15 @@ package app;
 import java.util.ArrayList;
 import java.util.List;
 
+import app.personas.Actor;
+import app.personas.Director;
+
 public class Aiflix {
 
     private List<Pelicula> peliculas = new ArrayList<>();
     private List<Serie> series = new ArrayList<>();
+
+    public List<INominable> nominados = new ArrayList<>();
 
     public List<Pelicula> getPelicula(){
         return this.peliculas;
@@ -20,6 +25,13 @@ public class Aiflix {
     }
     public void setSeries(List<Serie> series){
         this.series = series;
+    }
+
+    public List<INominable> getNominados(){
+        return this.nominados;
+    }
+    public void setNominados(List<INominable> nominados){
+        this.nominados = nominados;
     }
 
     
@@ -37,8 +49,14 @@ public class Aiflix {
         this.inicializarSupernatural();
         this.inicializarBokuNoHero();
         this.inicializarDark();
+        inicializarVForVendetta();
+        inicializarParasite();
+        inicializarJohnWick();
+        inicializarDeadpool();
 
     }
+
+    //Series
 
     public void inicializarSupernatural() {
 
@@ -308,5 +326,143 @@ public class Aiflix {
         this.series.add(serie3);
 
     }
+
+    //Peliculas
+
+    public void inicializarVForVendetta(){
+
+        Pelicula peli = new Pelicula("V for Vendetta",132,2005);
+        
+        peli.setDescripcion("In a future British tyranny, a shadowy freedom fighter, known only by the alias of V, plots to overthrow it with the help of a young woman.");
+        
+        Clasificacion clasificacion = new Clasificacion("R",18);
+        peli.setClasificacion(clasificacion);;
+
+        Genero genero = new Genero("Political Thriller");
+        
+        Director director = new Director();
+        director.setNombre("James McTeigue");
+        peli.getDirector().add(director);
+        
+        peli.setCalificacion(8.2);
+
+        Actor actor = new Actor();
+        actor.setNombre("Hugo Weaving");
+        peli.getElenco().add(actor);
+        actor = new Actor();
+        actor.setNombre("Natalie Portman");
+        peli.getElenco().add(actor);
+
+        this.getPelicula().add(peli);
+        
+        
+    }
+    public void inicializarParasite(){
+
+        Pelicula peli = new Pelicula("Parasite",132,2019);
+        peli.setDescripcion("follows the members of a poor family who scheme to become employed by a wealthy family by infiltrating their household and posing as unrelated, highly qualified individuals.");
+        
+        Clasificacion clasificacion = new Clasificacion("R",18);
+        peli.setClasificacion(clasificacion);;
+
+        Genero genero = new Genero("Black Comedy Thriller");
+        
+        Director director = new Director();
+        director.setNombre("Bong Joon Ho");
+        peli.getDirector().add(director);
+        
+        peli.setCalificacion(8.6);
+        Actor actor = new Actor();
+        actor.setNombre("Song Kang ho");
+        peli.getElenco().add(actor);
+        actor = new Actor();
+        actor.setNombre("Choi Woo sik");
+        peli.getElenco().add(actor);
+        actor = new Actor();
+        actor.setNombre("Park So dam");
+        peli.getElenco().add(actor);
+
+        this.getPelicula().add(peli);
+
+    }
+    public void inicializarJohnWick(){
+
+        Pelicula peli = new Pelicula("Hohn Wick: Chapter 1",101,2014);
+        
+        Clasificacion clasificacion = new Clasificacion("R",18);
+        peli.setClasificacion(clasificacion);;
+
+        Genero genero = new Genero("Action Thriller");
+        
+        Director director = new Director();
+        director.setNombre("David Leitch");
+        director = new Director();
+        director.setNombre("Chad Stahelski");
+        peli.getDirector().add(director);
+        
+        peli.setCalificacion(7.4);
+
+        Actor actor = new Actor();
+        actor.setNombre("Keanu Reeves");
+        peli.getElenco().add(actor);
+        actor = new Actor();
+        actor.setNombre("Ian McShane");
+        peli.getElenco().add(actor);
+        actor = new Actor();
+        actor.setNombre("Willem Dafoe");
+        peli.getElenco().add(actor);
+
+        this.getPelicula().add(peli);
+
+    }
+    public void inicializarDeadpool(){
+
+        Pelicula peli = new Pelicula("Deadpool",108,2016);
+        
+        Clasificacion clasificacion = new Clasificacion("R",18);
+        peli.setClasificacion(clasificacion);;
+
+        Genero genero = new Genero("Action");
+        
+        Director director = new Director();
+        director.setNombre("Tim Miller");
+        peli.getDirector().add(director);
+
+        peli.setCalificacion(8.0);
+
+        Actor actor = new Actor();
+        actor.setNombre("Ryan Reynolds");
+        actor = new Actor();
+        actor.setNombre("Morena Baccarin");
+
+    }
+
+   public void inicializarListaNominados() {
+
+        for (Pelicula peli : this.peliculas) {
+            this.nominados.add(peli);
+            for (Actor actor : peli.getElenco())
+                this.nominados.add(actor);
+
+        }
+        for (Serie serie : this.series) {
+            for (Actor actor : serie.getElenco())
+                this.nominados.add(actor);
+
+        }
+    }
+
+    public void reproducirTrailersDeNominacion() {
+        for (INominable nominado : nominados) {
+
+            nominado.reproducirTrailerNominacion();
+
+            if (nominado instanceof Actor) {
+                Actor actor = (Actor) nominado;
+                actor.decirDiscurso();
+        }
+        } 
+    }
+
 
 }
